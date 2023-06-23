@@ -6,7 +6,7 @@
       }
     },
     "editor.formatOnSave": true,
-    "cSpell.enableFiletypes": ["javascript"],
+    "cSpell.enableFiletypes": ["javascript","typescript"],
     "cSpell.language":"en,pt,pt_BR",
     "editor.tabSize": 2
   }
