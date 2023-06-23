@@ -1,21 +1,22 @@
 import './globals.css';
+import Headers from '@/components/Headers/Headers';
 
 type Metadata = {
   title: string;
   description: string;
   openGraph: {
-      title: string;
-      description: string;
-      url: string;
-      siteName: string;
-      images: string;
-      locale: string;
-      type: string;
+    title: string;
+    description: string;
+    url: string;
+    siteName: string;
+    images: string;
+    locale: string;
+    type: string;
   };
   icons: {
-      icon: string;
+    icon: string;
   };
-}
+};
 
 export const metadata: Metadata = {
   title: 'Leadster: Chatbot de Marketing para Aumentar Geração de Leads',
@@ -32,14 +33,17 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/assets/favicon/asset-header.ico'
-  }
+    icon: '/assets/favicon/asset-header.ico',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body>
+        <Headers />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,7 +1,10 @@
 import Image from 'next/image';
-import {jakartaBold} from './fonts';
+import Copy from '@/components/Home/Copy';
 
 export default function Home() {
-  return <>
-  <p className={jakartaBold.className}>OI BRUno</p>Bruno</>;
+  return (
+    <main>
+      <Copy />
+    </main>
+  );
 }
