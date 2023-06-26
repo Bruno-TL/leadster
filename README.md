@@ -50,7 +50,7 @@ Estou sempre buscando evoluir e aprender sobre programação e outros assuntos q
  
 ## How to use site online
  
-Put this url in your browser: 
+Put this url in your browser: https://leadster-eight.vercel.app/
 
 ## Contact links
  
