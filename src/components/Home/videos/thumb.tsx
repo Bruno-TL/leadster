@@ -23,8 +23,6 @@ export default function Thumb(props: ThumbProps) {
     setUrl(url);
     setShow(true);
   };
-
-  console.log(data[0].url);
   return (
     <div className="px-2">
       <section className="grid md:grid-cols-3 grid-cols-2 gap-4 lg:gap-16">
