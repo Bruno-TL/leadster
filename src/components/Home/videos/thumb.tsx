@@ -1,5 +1,3 @@
-'use client';
-
 import { jakartaBold, jakartaMedium, jakartaSemiBold } from '@/fonts/fonts';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -28,8 +26,8 @@ export default function Thumb(props: ThumbProps) {
 
   console.log(data[0].url);
   return (
-    <div>
-      <section className="grid grid-cols-3 gap-4 lg:gap-16">
+    <div className="px-2">
+      <section className="grid md:grid-cols-3 grid-cols-2 gap-4 lg:gap-16">
         {data.map((c) => (
           <div onClick={() => showVideo(c.url)}>
             <div
@@ -61,16 +59,16 @@ export default function Thumb(props: ThumbProps) {
               </div>
 
               <div className="p-6">
-                <p className={`${jakartaSemiBold.className} `}>{c.title}</p>
+                <p className={`${jakartaSemiBold.className} text-xs md:text-base `}>{c.title}</p>
               </div>
             </div>
           </div>
         ))}
       </section>
       {show && (
-        <section className="fixed z-50 top-0 xl:-left-1 w-full h-full border bg-slate-500 bg-opacity-50  flex justify-center items-center">
-          <div className="bg-white border-4 border-transparent rounded-xl border-t-sky-600 ">
-            <section className="flex py-5">
+        <section className="fixed z-50 top-0 -left-1 w-full h-full border bg-slate-500 bg-opacity-50  flex justify-center items-center">
+          <div className="bg-white  border-4 border-transparent rounded-xl border-t-sky-600 ">
+            <section className="flex py-2 lg:py-5">
               <div className="flex flex-col items-center justify-center w-11/12">
                 <p className={`${jakartaBold.className}`}>
                   <span className={`${jakartaSemiBold.className} text-sky-500`}>Webinar: </span>
@@ -97,32 +95,45 @@ export default function Thumb(props: ThumbProps) {
               </div>
             </section>
 
-            <Iframe
-              url={url}
-              width="560px"
-              height="315px"
-              id=""
-              className=""
-              display="block"
-              position="relative"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            />
-            <section className="p-4">
+            <div className="flex justify-center md:block">
+              <Iframe
+                url={url}
+                width="560px"
+                height="315px"
+                id=""
+                className="w-[22.5rem] md:w-[560px] h-44 md:h-[280px] lg:h-[315px]"
+                display="block"
+                position="relative"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              />
+            </div>
+
+            <div className="p-4">
               <div className="border border-transparent border-b-gray-400 mb-2">
-                <h2 className={`${jakartaSemiBold.className} text-gray-800 pb-2`}>Descrição</h2>
+                <h2
+                  className={`${jakartaSemiBold.className} text-gray-800 text-sm lg:text-base pb-2`}
+                >
+                  Descrição
+                </h2>
               </div>
-              <div className="mb-4">
-                <p className={`${jakartaMedium.className} text-gray-600 w-[33rem]`}>
+              <div className="mb-2 lg:mb-4">
+                <p
+                  className={`${jakartaMedium.className} text-gray-600 text-sm lg:text-base md:w-[33rem] w-30`}
+                >
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolore quos earum
                   iure, culpa, sapiente blanditiis laboriosam recusandae sed labore consequatur
                   reiciendis voluptas commodi.
                 </p>
               </div>
               <div className="border border-transparent border-b-gray-400 mb-3">
-                <h2 className={`${jakartaSemiBold.className} text-gray-800 pb-2`}>Dowloads</h2>
+                <h2
+                  className={`${jakartaSemiBold.className} text-gray-800 text-sm lg:text-base pb-2`}
+                >
+                  Dowloads
+                </h2>
               </div>
               <div className="flex flex-wrap justify-between">
-                <div className="flex mr-2 bg-teal-200 text-teal-600 bg-opacity-75 h-8  w-40 border border-transparent rounded-md">
+                <div className="flex mr-2 mb-2 md:mb-2 bg-teal-200 text-teal-600 bg-opacity-75 h-8  w-40 border border-transparent rounded-md">
                   <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +154,7 @@ export default function Thumb(props: ThumbProps) {
                     Spreadsheet.xls
                   </button>
                 </div>
-                <div className="flex mr-2 bg-blue-200 text-blue-600 bg-opacity-75 h-8  w-40 border border-transparent rounded-md">
+                <div className="flex mr-2 mb-2 md:mb-2 bg-blue-200 text-blue-600 bg-opacity-75 h-8  w-40 border border-transparent rounded-md">
                   <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +197,7 @@ export default function Thumb(props: ThumbProps) {
                   </button>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </section>
       )}

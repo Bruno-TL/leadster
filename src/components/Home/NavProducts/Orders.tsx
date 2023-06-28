@@ -33,7 +33,7 @@ export default function Orders() {
         </svg>
       </button>
       {visible && (
-        <div className="lg:transition lg:duration-700 lg:hover:scale-100 lg:scale-75 block absolute top-9 md:right-8 right-20 w-44 bg-white  border-2 rounded-md hover:border-sky-300 border-black">
+        <div className="lg:transition z-50 lg:duration-700 lg:hover:scale-100 lg:scale-75 block absolute top-9 md:right-8 right-20 w-44 bg-white  border-2 rounded-md hover:border-sky-300 border-black">
           <ul>
             <li
               onClick={() => changeOrders('Nome')}

@@ -61,7 +61,7 @@ export default function ThumbNails() {
   const data = dataJson;
   return (
     <section>
-      <section className=" xl:w-4/5 mx-auto md:mt-10 my-8 border border-transparent border-b-gray-400  pb-16 ">
+      <section className=" xl:w-4/5 lg:mx-auto md:mt-10 my-8 border border-transparent border-b-gray-400  pb-16 ">
         {state.page1 && <Thumb data={data} />}
         {state.page2 && <Thumb data={data} />}
         {state.page3 && <Thumb data={data} />}
