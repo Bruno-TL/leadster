@@ -7,6 +7,8 @@
 Olá me chamo Bruno, tenho 28 anos sou casado e pai de dog.
 Sou desenvolvedor Front-end que os estudos voltado ao React/Next.js, hoje trabalho como full-stack mas busco focar no front para me tornar especialista.
 Estou sempre buscando evoluir e aprender sobre programação e outros assuntos que fazem sentido para min.
+Estou entregando o projeto fora do prazo que foi próposto por min, mas quis entregar o teste mesmo assim.
+Gostei de fazer esse teste, afinal sempre é um aprendizado qualquer projeto que a gente faça.
 
 ## Reasons for structuring my code
 
