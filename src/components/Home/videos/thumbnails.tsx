@@ -55,7 +55,7 @@ function reducer(state: StateType, action: ActionType): StateType {
   }
 }
 
-export default function Videos() {
+export default function ThumbNails() {
   const initialState: StateType = { page1: true, page2: false, page3: false, page4: false };
   const [state, dispatch] = useReducer(reducer, initialState);
   const data = dataJson;
